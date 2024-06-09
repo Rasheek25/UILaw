@@ -67,6 +67,7 @@
     <p><span style="font-weight:bold;">Last Name:</span> <span id="confirmedLastName"></span></p>
     <p><span style="font-weight:bold;">Email Address:</span> <span id="confirmedEmail"></span></p>
     <p><span style="font-weight:bold;">Phone Number:</span> <span id="confirmedPhone"></span></p>
+    <p><span style="font-weight:bold;">Attorney:</span> <span id="confirmedAttorney"></span></p>
     <p><span style="font-weight:bold;">Date:</span> <span id="confirmedDate"></span></p>
     <p><span style="font-weight:bold;">Time:</span> <span id="confirmedTime"></span></p>
     <p><span style="font-weight:bold;">Services selected:</span><br><span style="font-weight:bold;">Property:</span> <span id="confirmedProperty"></span>
@@ -128,9 +129,9 @@
         document.getElementById('confirmedLastName').textContent = data.lastName;
         document.getElementById('confirmedEmail').textContent = data.email;
         document.getElementById('confirmedPhone').textContent = data.phone;
+        document.getElementById('confirmedAttorney').textContent = data.attorney;
         document.getElementById('confirmedDate').textContent = data.date;
         document.getElementById('confirmedTime').textContent = data.time;
-        console.log(data.checkProperty);
         if (data.checkProperty == true) {
             document.getElementById('confirmedProperty').textContent = "Yes"
         }

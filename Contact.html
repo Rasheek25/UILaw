@@ -87,6 +87,20 @@
                 </div>
 
                 <div class="form-group col-sm-3 mb-3">
+                    <select class="form-select" aria-label="Default select example" id="selectAttorney" style="margin-top:30px;">
+                        <option selected>Attorney</option>
+                        <option value="David Booker">David Booker</option>
+                        <option value="Sarah Thompson">Sarah Thompson</option>
+                        <option value="Omar Khan">Omar Khan</option>
+                        <option value="Ken Tanaka">Ken Tanaka</option>
+                        <option value="Priya Patel">Priya Patel</option>
+                        <option value="Karim Hassan">Karim Hassan</option>
+                        <option value="Elijah Moore">Elijah Moore</option>
+                        <option value="Joseph Turner">Joseph Turner</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-sm-3 mb-3">
                     <label>Date</label>
                     <input type="Date" class="form-control" id="date">
                 </div>
@@ -214,6 +228,7 @@
             var lastName = document.getElementById('lastName').value;
             var email = document.getElementById('emailAddress').value;
             var phone = document.getElementById('phoneNumber').value;
+            var attorney = document.getElementById('selectAttorney').value;
             var date = document.getElementById('date').value;
             var time = document.getElementById('selectTime').value;
             var property = document.getElementById('checkProperty').checked;
@@ -224,7 +239,7 @@
 
 
 
-            localStorage.setItem('formData', JSON.stringify({ firstName, lastName, email, phone, date, time, property, divorce, adoption, agreements, selectBox}));
+            localStorage.setItem('formData', JSON.stringify({ firstName, lastName, email, phone, attorney, date, time, property, divorce, adoption, agreements, selectBox}));
 
             window.location.href = 'confirm.html';
         });
